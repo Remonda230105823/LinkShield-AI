@@ -1,0 +1,368 @@
+{
+  "model": "LogisticRegression",
+  "phase": "Phase 1 baseline",
+  "positive_class": "phishing",
+  "positive_label": 1,
+  "threshold": 0.5,
+  "threshold_note": "Baseline convention; not tuned on any data.",
+  "random_state": 42,
+  "precision_phishing": 0.9999500224898795,
+  "recall_phishing": 0.9953238483732962,
+  "f1_phishing": 0.9976315723866271,
+  "accuracy": 0.9979818150917743,
+  "accuracy_note": "Supplementary only.",
+  "roc_auc": 0.9988641548790822,
+  "average_precision": 0.9991034109104665,
+  "confusion_matrix_label_order": [
+    "legitimate_0",
+    "phishing_1"
+  ],
+  "confusion_matrix": [
+    [
+      26969,
+      1
+    ],
+    [
+      94,
+      20008
+    ]
+  ],
+  "tn": 26969,
+  "fp": 1,
+  "fn": 94,
+  "tp": 20008,
+  "false_positive_rate": 3.707823507601038e-05,
+  "false_negative_rate": 0.00467615162670381,
+  "test_rows": 47072,
+  "test_class_counts": {
+    "legitimate_0": 26970,
+    "phishing_1": 20102
+  },
+  "train_class_counts": {
+    "legitimate_0": 107880,
+    "phishing_1": 80404
+  },
+  "unseen_hostname_subset": {
+    "precision_phishing": 0.9999388416610605,
+    "recall_phishing": 0.9987782529016493,
+    "f1_phishing": 0.9993582103236454,
+    "accuracy": 0.9995153137766289,
+    "tn": 26956,
+    "fp": 1,
+    "fn": 20,
+    "tp": 16350,
+    "rows": 43327,
+    "phishing_rows": 16370
+  },
+  "cross_validation_on_train": {
+    "folds": 5,
+    "shuffle_random_state": 42,
+    "precision_phishing_mean": 0.999937548386969,
+    "precision_phishing_std": 6.838838870493676e-05,
+    "precision_phishing_per_fold": [
+      1.0,
+      0.9999375,
+      0.999812710700462,
+      0.9999375312343828,
+      1.0
+    ],
+    "recall_phishing_mean": 0.9953857948922138,
+    "recall_phishing_std": 0.00045940577108175354,
+    "recall_phishing_per_fold": [
+      0.9958957776257695,
+      0.9949008146259561,
+      0.9958957776257695,
+      0.9953982961258628,
+      0.9948383084577115
+    ],
+    "f1_phishing_mean": 0.9976564189748472,
+    "f1_phishing_std": 0.00021865052100899926,
+    "f1_phishing_per_fold": [
+      0.9979436689930209,
+      0.9974127988529036,
+      0.9978504003239976,
+      0.9976627504752408,
+      0.9974124762290738
+    ]
+  },
+  "training": {
+    "train_rows": 188284,
+    "max_iter": 1000,
+    "n_iter_used": 17,
+    "converged": true,
+    "convergence_warnings": [],
+    "n_model_input_columns": 580
+  },
+  "model_params": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "pipeline_steps": [
+    "url_features",
+    "preprocessor",
+    "classifier"
+  ],
+  "pipeline_params": {
+    "classifier": "LogisticRegression(class_weight='balanced', max_iter=1000, random_state=42)",
+    "classifier__C": 1.0,
+    "classifier__class_weight": "balanced",
+    "classifier__dual": false,
+    "classifier__fit_intercept": true,
+    "classifier__intercept_scaling": 1,
+    "classifier__l1_ratio": 0.0,
+    "classifier__max_iter": 1000,
+    "classifier__n_jobs": null,
+    "classifier__penalty": "deprecated",
+    "classifier__random_state": 42,
+    "classifier__solver": "lbfgs",
+    "classifier__tol": 0.0001,
+    "classifier__verbose": 0,
+    "classifier__warm_start": false,
+    "memory": null,
+    "preprocessor": "ColumnTransformer(transformers=[('num', Pipeline(steps=[('imputer', SimpleImputer(fill_value=0, strategy='constant')), ('scaler', StandardScaler())]), ['url_length', 'domain_length', 'path_length', 'q",
+    "preprocessor__cat": "Pipeline(steps=[('imputer', SimpleImputer(fill_value='unknown', strategy='constant')), ('encoder', OneHotEncoder(dtype=<class 'int'>, handle_unknown='ignore', sparse_output=False))])",
+    "preprocessor__cat__encoder": "OneHotEncoder(dtype=<class 'int'>, handle_unknown='ignore', sparse_output=False)",
+    "preprocessor__cat__encoder__categories": "auto",
+    "preprocessor__cat__encoder__drop": null,
+    "preprocessor__cat__encoder__dtype": "<class 'int'>",
+    "preprocessor__cat__encoder__feature_name_combiner": "concat",
+    "preprocessor__cat__encoder__handle_unknown": "ignore",
+    "preprocessor__cat__encoder__max_categories": null,
+    "preprocessor__cat__encoder__min_frequency": null,
+    "preprocessor__cat__encoder__sparse_output": false,
+    "preprocessor__cat__imputer": "SimpleImputer(fill_value='unknown', strategy='constant')",
+    "preprocessor__cat__imputer__add_indicator": false,
+    "preprocessor__cat__imputer__copy": true,
+    "preprocessor__cat__imputer__fill_value": "unknown",
+    "preprocessor__cat__imputer__keep_empty_features": false,
+    "preprocessor__cat__imputer__missing_values": NaN,
+    "preprocessor__cat__imputer__strategy": "constant",
+    "preprocessor__cat__memory": null,
+    "preprocessor__cat__steps": "[('imputer', SimpleImputer(fill_value='unknown', strategy='constant')), ('encoder', OneHotEncoder(dtype=<class 'int'>, handle_unknown='ignore', sparse_output=False))]",
+    "preprocessor__cat__transform_input": null,
+    "preprocessor__cat__verbose": false,
+    "preprocessor__force_int_remainder_cols": "deprecated",
+    "preprocessor__n_jobs": null,
+    "preprocessor__num": "Pipeline(steps=[('imputer', SimpleImputer(fill_value=0, strategy='constant')), ('scaler', StandardScaler())])",
+    "preprocessor__num__imputer": "SimpleImputer(fill_value=0, strategy='constant')",
+    "preprocessor__num__imputer__add_indicator": false,
+    "preprocessor__num__imputer__copy": true,
+    "preprocessor__num__imputer__fill_value": 0,
+    "preprocessor__num__imputer__keep_empty_features": false,
+    "preprocessor__num__imputer__missing_values": NaN,
+    "preprocessor__num__imputer__strategy": "constant",
+    "preprocessor__num__memory": null,
+    "preprocessor__num__scaler": "StandardScaler()",
+    "preprocessor__num__scaler__copy": true,
+    "preprocessor__num__scaler__with_mean": true,
+    "preprocessor__num__scaler__with_std": true,
+    "preprocessor__num__steps": "[('imputer', SimpleImputer(fill_value=0, strategy='constant')), ('scaler', StandardScaler())]",
+    "preprocessor__num__transform_input": null,
+    "preprocessor__num__verbose": false,
+    "preprocessor__remainder": "drop",
+    "preprocessor__sparse_threshold": 0.3,
+    "preprocessor__transformer_weights": null,
+    "preprocessor__verbose": false,
+    "preprocessor__verbose_feature_names_out": true,
+    "transform_input": null,
+    "url_features": "URLFeatureExtractor()",
+    "verbose": false
+  },
+  "feature_schema": {
+    "raw_feature_count": 25,
+    "raw_feature_names_in_order": [
+      "url_length",
+      "domain_length",
+      "path_length",
+      "query_length",
+      "fragment_length",
+      "num_dots",
+      "num_hyphens",
+      "num_underscores",
+      "num_slashes",
+      "num_at_symbols",
+      "num_question_marks",
+      "num_ampersands",
+      "num_equal_signs",
+      "num_percent_signs",
+      "num_digits",
+      "num_special_chars",
+      "num_subdomains",
+      "has_ip",
+      "has_https",
+      "has_www",
+      "has_fragment",
+      "has_query",
+      "url_entropy",
+      "suspicious_keyword_count",
+      "tld"
+    ]
+  },
+  "top_coefficients": {
+    "numeric_pushing_towards_phishing": [
+      {
+        "feature": "num__num_slashes",
+        "coefficient": 12.551287985568887
+      },
+      {
+        "feature": "num__num_digits",
+        "coefficient": 7.1819807385020695
+      },
+      {
+        "feature": "num__num_special_chars",
+        "coefficient": 2.9163858294872966
+      },
+      {
+        "feature": "num__path_length",
+        "coefficient": 0.6906581179666125
+      },
+      {
+        "feature": "num__url_length",
+        "coefficient": 0.6157480130638038
+      },
+      {
+        "feature": "num__num_dots",
+        "coefficient": 0.5755811449429848
+      },
+      {
+        "feature": "num__has_query",
+        "coefficient": 0.5722766319873737
+      },
+      {
+        "feature": "num__query_length",
+        "coefficient": 0.524628264350585
+      }
+    ],
+    "numeric_pushing_towards_legitimate": [
+      {
+        "feature": "num__has_https",
+        "coefficient": -7.41138921465657
+      },
+      {
+        "feature": "num__has_www",
+        "coefficient": -5.5988456317896595
+      },
+      {
+        "feature": "num__has_ip",
+        "coefficient": -0.6407642497745494
+      },
+      {
+        "feature": "num__num_at_symbols",
+        "coefficient": -0.5700133554711737
+      },
+      {
+        "feature": "num__num_subdomains",
+        "coefficient": -0.32204567344854934
+      },
+      {
+        "feature": "num__num_percent_signs",
+        "coefficient": -0.2977116816540769
+      },
+      {
+        "feature": "num__num_hyphens",
+        "coefficient": -0.2741790677897545
+      },
+      {
+        "feature": "num__has_fragment",
+        "coefficient": -0.2705087806370704
+      }
+    ]
+  },
+  "contract_checks": {
+    "labels_binary": true,
+    "exact_url_overlap": 0,
+    "normalized_url_overlap": 0,
+    "matches_person2_split_summary": true,
+    "split_reproducible_from_cleaned_csv": true,
+    "feature_count": 25,
+    "target_not_in_features": true,
+    "test_rows_with_hostname_seen_in_train": 3745,
+    "test_rows_with_hostname_seen_in_train_pct": 0.07955897348742352
+  },
+  "split": {
+    "method": "stratified 80/20 by is_phishing (Person 2's saved split)",
+    "seed": 42,
+    "train_file": "data/processed/train.csv",
+    "test_file": "data/processed/test.csv",
+    "train_sha256": "04b773247d7437bfca2ed7e34be7ac165f0eceded7ceab779e88200ca953044b",
+    "test_sha256": "af3502b23daddeec2c1eb9199a87fb0f197c5a09b0302d0d89411630ce7aefad"
+  },
+  "dataset": {
+    "name": "PhiUSIIL Phishing URL (Website)",
+    "uci_dataset_id": 967,
+    "license": "CC BY 4.0 (confirmed on the official UCI dataset page, 2026-11-16)",
+    "doi": "10.1016/j.cose.2023.103545",
+    "raw_export_sha256": "fe2271b5e5f09dc9f013f669b76fbb483b1f5806b149ae409c4b09ea04b14190"
+  },
+  "package_versions": {
+    "python": "3.12.10",
+    "scikit-learn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "joblib": "1.5.3",
+    "matplotlib": "3.10.9"
+  },
+  "run_timestamp_utc": "2026-11-16 19:03 UTC",
+  "business_metric_inputs_for_person4": {
+    "basis": "per 10,000 screened URLs at the test-set class mix (42.7% phishing \u2014 a benchmark mix, not real bank traffic)",
+    "alerts_raised_tp_plus_fp": 4250.722297756628,
+    "of_which_false_alarms_fp": 0.2124405166553365,
+    "missed_phishing_fn": 19.969408565601633,
+    "review_hours_by_assumed_minutes_per_alert": {
+      "1_min": 70.84537162927714,
+      "3_min": 212.53611488783142,
+      "5_min": 354.22685814638567
+    },
+    "assumption_note": "1/3/5 minutes per alert are illustrative scenarios only; no bank interview or cited source backs them."
+  },
+  "dataset_artifact_check": {
+    "train_share_of_urls_where": {
+      "scheme_is_https": {
+        "legitimate": 1.0,
+        "phishing": 0.4853365504203771
+      },
+      "hostname_starts_with_www": {
+        "legitimate": 1.0,
+        "phishing": 0.4152654096811104
+      },
+      "path_longer_than_slash": {
+        "legitimate": 0.0,
+        "phishing": 0.2717775235062932
+      },
+      "has_query_string": {
+        "legitimate": 0.0,
+        "phishing": 0.06005920103477439
+      }
+    },
+    "trivial_rule": "predict phishing unless the URL is https AND starts with www.",
+    "trivial_rule_test_scores": {
+      "precision_phishing": 1.0,
+      "recall_phishing": 0.9772161973932942,
+      "f1_phishing": 0.9884768278568913,
+      "accuracy": 0.9902702243371856,
+      "tn": 26970,
+      "fp": 0,
+      "fn": 458,
+      "tp": 19644
+    },
+    "note": "Reference point only. The rule was written from training-data statistics and is not part of the model."
+  },
+  "model_artifact": {
+    "path": "artifacts/linkshield_logreg_baseline.joblib",
+    "bytes": 9615,
+    "sha256": "72f9f94784c01c29b9bf4f44041b5c53042964a5d23d1967abe87077613d2e5d",
+    "load_note": "Load with joblib from the project root so that 'src.url_features' can be imported."
+  }
+}

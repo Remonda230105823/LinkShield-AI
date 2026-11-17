@@ -1,0 +1,64 @@
+{
+  "dataset_name": "PhiUSIIL Phishing URL (Website)",
+  "uci_dataset_id": 967,
+  "source_url": "https://archive.ics.uci.edu/dataset/967/phiusil+phishing+url+dataset",
+  "access_date_utc_for_this_export": "2026-11-16",
+  "source_download_date": "Not recorded during initial download",
+  "license": "CC BY 4.0 (confirmed on the official UCI dataset page, 2026-11-16)",
+  "authors_from_uci_metadata": [
+    "Arvind Prasad",
+    "Shalini Chandra"
+  ],
+  "citation_from_uci_metadata": "Prasad, A. & Chandra, S. (2024). PhiUSIIL Phishing URL (Website) [Dataset]. UCI Machine Learning Repository. https://doi.org/10.1016/j.cose.2023.103545.",
+  "doi_from_uci_metadata": "10.1016/j.cose.2023.103545",
+  "retrieval_method": "ucimlrepo.fetch_ucirepo(id=967)",
+  "raw_filename": "Not applicable: loaded using ucimlrepo; original downloaded filename not recorded",
+  "raw_row_count": 235795,
+  "raw_feature_column_count": 54,
+  "raw_target_column_count": 1,
+  "url_column": "URL",
+  "original_target_column": "label",
+  "original_label_mapping": {
+    "1": "legitimate",
+    "0": "phishing"
+  },
+  "project_label_mapping": {
+    "1": "phishing",
+    "0": "legitimate"
+  },
+  "retained_columns": [
+    "url",
+    "is_phishing"
+  ],
+  "excluded_columns": "All original UCI features except URL; target label converted",
+  "original_class_counts": {
+    "1": 134850,
+    "0": 100945
+  },
+  "missing_url_count": 0,
+  "empty_url_count": 0,
+  "exact_duplicate_url_count": 425,
+  "conflicting_label_url_count": 0,
+  "exported_csv_relative_path": "data/raw/person1_raw_labeled_urls.csv",
+  "exported_csv_sha256": "fe2271b5e5f09dc9f013f669b76fbb483b1f5806b149ae409c4b09ea04b14190",
+  "exported_csv_bytes": 9046919,
+  "cleaning_status": "Not cleaned; P2 responsible for cleaning, normalized deduplication and split",
+  "url_length_summary": {
+    "legitimate": {
+      "mean": 27.228609566184648,
+      "median": 27.0,
+      "max": 58
+    },
+    "phishing": {
+      "mean": 46.238773589578486,
+      "median": 34.0,
+      "max": 6097
+    }
+  },
+  "doi": "10.1016/j.cose.2023.103545",
+  "citation": "Prasad, A. & Chandra, S. (2024). PhiUSIIL Phishing URL (Website) [Dataset]. UCI Machine Learning Repository. https://doi.org/10.1016/j.cose.2023.103545.",
+  "authors": [
+    "Arvind Prasad",
+    "Shalini Chandra"
+  ]
+}

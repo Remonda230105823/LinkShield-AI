@@ -1,0 +1,62 @@
+{
+  "stages": {
+    "schema_validation": {
+      "columns_present": [
+        "url",
+        "is_phishing"
+      ],
+      "expected_columns_found": true,
+      "unexpected_columns": [],
+      "label_dtype": "int64",
+      "labels_valid": true,
+      "url_dtype": "str",
+      "urls_are_strings": true,
+      "missing_url_count": 0,
+      "missing_label_count": 0,
+      "invalid_label_count": 0,
+      "non_string_url_count": 0,
+      "total_rows": 235795
+    },
+    "url_coercion": {
+      "coerced_count": 0
+    },
+    "whitespace": {
+      "leading_trailing_stripped": 0,
+      "empty_after_strip": 0,
+      "whitespace_only": 0
+    },
+    "invalid_removal": {
+      "missing_urls": 0,
+      "empty_urls": 0,
+      "missing_labels": 0,
+      "invalid_labels": 0,
+      "total_removed": 0,
+      "rows_after": 235795
+    },
+    "duplicate_detection": {
+      "exact_duplicate_count": 425,
+      "normalized_dup_groups": 439,
+      "normalized_dup_total_rows": 878,
+      "conflicting_label_groups": 0,
+      "conflicting_row_count": 0,
+      "same_label_dup_rows": 439
+    },
+    "duplicate_handling": {
+      "conflicting_label_groups": 0,
+      "quarantined_rows": 0,
+      "same_label_dups_removed": 439,
+      "clean_rows_after_dedup": 235356
+    }
+  },
+  "original_rows": 235795,
+  "original_class_counts": {
+    "0": 134850,
+    "1": 100945
+  },
+  "final_clean_rows": 235356,
+  "quarantined_rows": 0,
+  "final_class_counts": {
+    "legitimate (0)": 134850,
+    "phishing (1)": 100506
+  }
+}

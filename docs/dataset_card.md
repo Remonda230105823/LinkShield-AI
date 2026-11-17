@@ -1,0 +1,21 @@
+# Dataset Card — PhiUSIIL Phishing URL (Website)
+
+- **UCI dataset ID:** 967
+- **Official source:** https://archive.ics.uci.edu/dataset/967/phiusil+phishing+url+dataset
+- **Access date of this documentation/export (UTC):** 2026-11-16; exact original download timestamp not recorded.
+- **Retrieval method:** `fetch_ucirepo(id=967)`; no original CSV filename recorded.
+- **Authors (metadata):** ['Arvind Prasad', 'Shalini Chandra']
+- **Citation (metadata):** Prasad, A. & Chandra, S. (2024). PhiUSIIL Phishing URL (Website) [Dataset]. UCI Machine Learning Repository. https://doi.org/10.1016/j.cose.2023.103545.
+- **DOI (metadata):** 10.1016/j.cose.2023.103545
+- **License:** CC BY 4.0 (confirmed on the official UCI dataset page, 2026-11-16)
+- **Observed dataset:** 235,795 records; 54 feature columns plus one target column.
+- **Original columns used:** `URL` and `label`.
+- **Original label meaning:** `1 = legitimate`, `0 = phishing`.
+- **Project label meaning:** `is_phishing = 1` for phishing, `0` for legitimate (`1 - original_label`).
+- **Original class counts:** legitimate 134,850, phishing 100,945.
+- **Null/empty URLs:** 0 null, 0 empty/whitespace-only.
+- **Exact-string duplicates:** 425; **conflicting-label URL groups:** 0.
+- **Model input contract:** retain only `url` and `is_phishing`; exclude the other precomputed UCI features to avoid using data unavailable to the intended lexical URL-only pipeline.
+- **Limitations:** This dataset is not a representative sample of real bank traffic. URL length and class distributions are descriptive, not evidence of generalization. Duplicate normalization, URL validation, leakage checks and splitting belong to Person 2. Labels may contain dataset-specific bias.
+- **Safety:** Treat all URLs as inert strings; do not open, resolve, click, or visit them.
+- **Reproducibility:** See `data/manifest.json` and `notebooks/01_data_audit_eda.ipynb`.

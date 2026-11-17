@@ -1,0 +1,49 @@
+# ===== Raw data (never commit to GitHub) =====
+data/raw/*.csv
+data/raw/*.tsv
+data/raw/*.json
+person1_raw_labeled_urls.csv
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ===== Virtual environments =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== Secrets =====
+.env
+.env.local
+*.key
+*.pem
+
+# ===== Build / dist =====
+build/
+dist/
+*.egg-info/
+
+# ===== Temporary files =====
+*.tmp
+*.temp
+*.log
+data/processed/*.csv

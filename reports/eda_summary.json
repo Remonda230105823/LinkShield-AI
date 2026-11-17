@@ -1,0 +1,21 @@
+{
+    "total_records": 235795,
+    "legitimate_count": 134850,
+    "phishing_count": 100945,
+    "missing_urls": 0,
+    "empty_urls": 0,
+    "exact_duplicate_urls": 425,
+    "conflicting_label_urls": 0,
+    "url_length_statistics": {
+        "legitimate": {
+            "mean": 27.228609566184648,
+            "median": 27.0,
+            "max": 58
+        },
+        "phishing": {
+            "mean": 46.238773589578486,
+            "median": 34.0,
+            "max": 6097
+        }
+    }
+}

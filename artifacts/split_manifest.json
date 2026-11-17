@@ -1,0 +1,66 @@
+{
+  "random_seed": 42,
+  "split_strategy": "stratified_by_is_phishing",
+  "train_proportion": 0.8,
+  "test_proportion": 0.2,
+  "total_clean_rows": 235356,
+  "train_rows": 188284,
+  "test_rows": 47072,
+  "train_class_counts": {
+    "legitimate (0)": 107880,
+    "phishing (1)": 80404
+  },
+  "test_class_counts": {
+    "legitimate (0)": 26970,
+    "phishing (1)": 20102
+  },
+  "train_class_proportions": {
+    "legitimate (0)": 0.5729642455014765,
+    "phishing (1)": 0.4270357544985235
+  },
+  "test_class_proportions": {
+    "legitimate (0)": 0.5729520734194425,
+    "phishing (1)": 0.42704792658055746
+  },
+  "split_files": {
+    "train": "data/processed/train.csv",
+    "test": "data/processed/test.csv",
+    "source": "data/processed/cleaned_urls.csv"
+  },
+  "feature_schema_version": "1.0",
+  "feature_count": 25,
+  "feature_names_in_order": [
+    "url_length",
+    "domain_length",
+    "path_length",
+    "query_length",
+    "fragment_length",
+    "num_dots",
+    "num_hyphens",
+    "num_underscores",
+    "num_slashes",
+    "num_at_symbols",
+    "num_question_marks",
+    "num_ampersands",
+    "num_equal_signs",
+    "num_percent_signs",
+    "num_digits",
+    "num_special_chars",
+    "num_subdomains",
+    "has_ip",
+    "has_https",
+    "has_www",
+    "has_fragment",
+    "has_query",
+    "url_entropy",
+    "suspicious_keyword_count",
+    "tld"
+  ],
+  "dataset_manifest_reference": {
+    "path": "data/manifest.json",
+    "dataset_name": "PhiUSIIL Phishing URL (Website)",
+    "uci_dataset_id": 967,
+    "raw_export_sha256": "fe2271b5e5f09dc9f013f669b76fbb483b1f5806b149ae409c4b09ea04b14190"
+  },
+  "note": "No raw URLs are stored in this manifest."
+}
