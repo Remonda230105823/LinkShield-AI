@@ -34,8 +34,7 @@ LinkShield AI classifies URLs as legitimate or phishing based **exclusively on l
 | **Phase 1: Step 1** | **Person 1** | Dataset Research, EDA & Manifest | **Completed** | Problem statement, dataset card, manifest, initial EDA notebook and reports. |
 | **Phase 1: Step 2** | **Person 2** | Feature Engineering & Preprocessing | **Completed** | Cleaning pipeline, deduplication, train/test split, 25-feature extractor, preprocessor, 63 unit tests, leakage audit, feature dictionary, notebook 02. |
 | **Phase 1: Step 3** | **Person 3** | Baseline Model Development | **Completed** | Logistic Regression baseline (`src/train_baseline.py`), notebook 03, metrics JSON, confusion matrix, baseline notes, fitted Pipeline artifact, 10 unit tests, handover to Person 4. |
-| **Phase 2** | **Person 4** | Advanced Models & Ensemble | *Upcoming* | Tree ensembles, neural architectures, error analysis. |
-
+| **Phase 1: Step 4** | **Person 4** | Integration, Business Metric, Report & Presentation | **Completed** | Business metric assumptions, requirement traceability, final report, Phase 1 presentation. |
 ---
 
 ## 4. Completed Work
